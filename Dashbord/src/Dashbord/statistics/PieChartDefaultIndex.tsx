@@ -48,7 +48,7 @@ export default function FuelTypePie({
             </Pie>
 
             <Tooltip
-              formatter={(v: number, name: string) => [`${v}%`, name]}
+              formatter={(v: number | undefined, name: string | undefined) => [`${v ?? 0}%`, name ?? ""]}
               contentStyle={{
                 backgroundColor: tooltipBg,
                 border: `1px solid ${tooltipBorder}`,

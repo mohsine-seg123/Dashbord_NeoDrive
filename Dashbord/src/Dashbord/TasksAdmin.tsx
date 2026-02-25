@@ -107,7 +107,7 @@ export default function TasksAdmin(): JSX.Element {
             {activeTask ? (
               <div className="bg-white dark:bg-dark-bg border-2 border-blue-500 rounded-lg p-4 shadow-2xl opacity-90 rotate-3 transform scale-105">
                 <h3 className="font-semibold text-text dark:text-dark-text-primary">
-                  {activeTask.title}
+                  {activeTask.description}
                 </h3>
                 <p className="text-sm text-text-muted dark:text-slate-400 mt-1">
                   {activeTask.description}

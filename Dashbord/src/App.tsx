@@ -5,7 +5,7 @@ import type { JSX } from "react";
 import TastksAdmin from "./Dashbord/TasksAdmin";
 import UsersManagment from "./Dashbord/UsersManagment";
 import ManageContact from "./Dashbord/manageContact";
-import Cars from "./Dashbord/cars";
+import Cars from "./Dashbord/Cars";
 import Login from "./auth/Login";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import { Toaster } from "react-hot-toast";

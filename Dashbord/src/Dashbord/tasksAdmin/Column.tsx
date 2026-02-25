@@ -11,11 +11,15 @@ export default function Column({
   tasks,
   setTasks,
   deleteTask,
+  isOver,
+  isDragging,
 }: {
   column: ColumnType;
   tasks: Task[];
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
   deleteTask: (id: string) => void;
+  isOver: boolean;
+  isDragging: boolean;
 }): JSX.Element {
 
     
@@ -55,7 +59,13 @@ export default function Column({
       </h2>
       <div
         ref={setNodeRef}
-        className="w-full h-full rounded-lg shadow-inherit  flex flex-col gap-4 "
+        className={`w-full h-full rounded-lg shadow-inherit flex flex-col gap-4 transition-colors ${
+          isOver
+            ? "bg-blue-50/60 dark:bg-blue-950/30 ring-1 ring-blue-400"
+            : isDragging
+              ? "bg-black/5 dark:bg-white/5"
+              : ""
+        }`}
       >
         {tasks.map((task) => (
           <TaskCard key={task.id} deleteTask={deleteTask} task={task} />

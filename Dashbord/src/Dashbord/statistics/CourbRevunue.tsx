@@ -74,9 +74,9 @@ export default function CourbRevenue(): JSX.Element {
               color: axis,
             }}
             labelStyle={{ color: axis }}
-            formatter={(value: number, name: string) => [
-              `${value.toLocaleString()} MAD`,
-              name.charAt(0).toUpperCase() + name.slice(1),
+            formatter={(value: number | undefined, name: string | undefined) => [
+              `${(value ?? 0).toLocaleString()} MAD`,
+              name ? name.charAt(0).toUpperCase() + name.slice(1) : "",
             ]}
           />
           <Legend wrapperStyle={{ color: axis }} />
