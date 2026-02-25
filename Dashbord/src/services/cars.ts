@@ -4,7 +4,7 @@ import type { CarsResponse, Car } from "../Interfaces/car";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export const getAllCars = () => axios.get<CarsResponse>(`${API_URL}/cars`);
+export const getAllCars = () => axios.get<CarsResponse>(`${API_URL}api/cars`);
 
 export const getCarById = (id: string) =>
   axios.get<{ data: { car: Car } }>(`${API_URL}/cars/${id}`);
